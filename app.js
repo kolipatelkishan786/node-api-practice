@@ -5,14 +5,15 @@ const restful = require('node-restful'),
     mongoose = restful.mongoose;
 require('dotenv').config();
 const strings = require('./strings');
+const multer = require('multer');
+app.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.CONNECTION_STRING, {
-        promiseLibrary: Promise,
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    }
-).then((out) => console.log("MongoDB Connected...."));
+    promiseLibrary: Promise,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then((out) => console.log("MongoDB Connected...."));
 let port = 8080;
 app.use(bodyParser.json());
 app.use(bodyParser.json({type: 'application/*+json'}));

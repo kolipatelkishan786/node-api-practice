@@ -3,9 +3,9 @@
  */
 const _ = require("lodash");
 
-var loader = {
-};
+let loader = {};
 let User = require("./user.model");
 let contact = require("./contact.model");
+let product = require("./product.model");
 
 module.exports = loader;

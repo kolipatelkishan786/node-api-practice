@@ -2,7 +2,7 @@
  * Created by mayur on 9/25/2016.
  */
 
-var strings = {
+let strings = {
     app: undefined,
     settings: undefined,
     All: "All",
